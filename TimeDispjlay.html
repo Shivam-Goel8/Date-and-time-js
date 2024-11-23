@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        background-color: black;
+    }
+    #clock{
+       color: #fff;
+       background-color: orange;
+       width: fit-content;
+       padding: 10px;
+       border-radius: 5px;
+       font-size: 20px;
+    }
+    #date{
+       color: #fff;
+       background-color: orange;
+       width: fit-content;
+       padding: 10px;
+       border-radius: 5px;
+       font-size: 20px;
+    }
+    h1{
+        color: #fff;
+    }
+    h2{
+        color: #fff;
+    }
+
+
+    
+    </style>
+</head>
+<body>
+    <h1>Current Time</h1>
+    <div id="clock">
+        <div id="banner"></div>
+    </div>
+<!-- ---------------------date------------------- -->
+
+    <h2>Current Date</h2>
+    <div id="date">
+        <div id="dates"></div>
+    </div>
+
+</body>
+<script>
+const clock = document.querySelector('#clock')
+
+setInterval(function (){
+    const date = new Date
+    clock.innerHTML= date.toLocaleTimeString()
+    
+})
+// --------------------Date----------------------
+const dateElement = document.querySelector('#date')
+
+setInterval(function (){
+    const date = new Date
+    dateElement.innerHTML= date.toLocaleDateString()
+})
+</script>
+</html>
